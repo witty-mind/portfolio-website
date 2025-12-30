@@ -61,14 +61,13 @@ class AppTheme {
           fontWeight: FontWeight.w400,
         ),
       ),
-      cardTheme: CardThemeData(
-        color: surface,
-        elevation: 0,
+      cardTheme: CardTheme(
+        color: Colors.black,
+        elevation: 8,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-          side: const BorderSide(color: border, width: 1),
-        ),
+        borderRadius: BorderRadius.circular(16),
       ),
+    ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: primary,
