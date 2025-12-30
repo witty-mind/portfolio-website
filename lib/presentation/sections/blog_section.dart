@@ -34,13 +34,15 @@ class _BlogSectionState extends State<BlogSection> {
 
     return LayoutBuilder(builder: (context, constraints) {
       final width = constraints.maxWidth;
-  // Preferred fixed tile width. We want to display 3 tiles per page while
-  // keeping consistent spacing with ProjectsSection. Compute tile width so
-  // three tiles plus spacing fit the available width.
-  const double preferredTileWidth = 350;
-  const double itemSpacing = 32.0; // match ProjectsSection crossAxisSpacing
-  final double maxAvailableForTiles = width - (itemSpacing * 2); // two gaps between three tiles
-  final double tileWidth = min(preferredTileWidth, maxAvailableForTiles / 3);
+      // Preferred fixed tile width. We want to display 3 tiles per page while
+      // keeping consistent spacing with ProjectsSection. Compute tile width so
+      // three tiles plus spacing fit the available width.
+      const double preferredTileWidth = 350;
+      const double itemSpacing = 32.0; // match ProjectsSection crossAxisSpacing
+      final double maxAvailableForTiles =
+          width - (itemSpacing * 2); // two gaps between three tiles
+      final double tileWidth =
+          min(preferredTileWidth, maxAvailableForTiles / 3);
 
       // Number of pages (groups of 3 tiles per page)
       final int itemsPerPage = 3;
@@ -51,7 +53,6 @@ class _BlogSectionState extends State<BlogSection> {
         children: [
           const SectionTitle(number: "03", title: "Insights"),
           const SizedBox(height: 24),
-
           SizedBox(
             height: 360,
             child: PageView.builder(
@@ -91,9 +92,7 @@ class _BlogSectionState extends State<BlogSection> {
               },
             ),
           ),
-
           const SizedBox(height: 16),
-
           Center(
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -156,7 +155,7 @@ class _BlogCardState extends State<_BlogCard> {
       child: Container(
         width: 350,
         padding: const EdgeInsets.all(32),
-          decoration: BoxDecoration(
+        decoration: BoxDecoration(
           color: const Color(0xFF0A0A0A),
           borderRadius: BorderRadius.circular(20),
           border: Border.all(

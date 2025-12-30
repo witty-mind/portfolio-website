@@ -2,7 +2,7 @@ import '../models/models.dart';
 import '../../core/constants/constants.dart';
 
 class PortfolioContent {
-  static const String name = "Debasish Kumar Das";
+  static const String name = "Debasish";
   static const String role = "Software Engineer";
   static const String headline = "Building Scalable Mobile & AI Solutions.";
   static const String summary = '''
